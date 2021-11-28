@@ -1,0 +1,24 @@
+package Rajesh;
+import java.util.*;
+public class First {
+    int sum(int n)
+    {
+    	int aa=0;
+    	for(int i=1;i<n;i++)
+    	{
+    		if(i%3==0 && i%5==0)
+    		{
+    			System.out.println(i);
+    		}
+    	}
+    	return aa;
+    }
+	public static void main(String[] args) {
+      Scanner s=new Scanner(System.in);
+      System.out.println("enter natural number");
+      int n=s.nextInt();
+      First f=new First();
+      f.sum(n);
+	}
+
+}
