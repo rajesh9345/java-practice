@@ -1,0 +1,31 @@
+
+import java.util.Scanner;
+public class Main
+{
+    void div(int nn)
+    {
+        int eve=2,sum=0;
+        for(int i=1;i<=nn;i++)
+        {
+            sum +=eve;
+            eve +=2;
+        }
+        if(sum%3==0 && sum%8==0)
+        {
+             System.out.println(sum);
+        }
+        else
+        {
+            System.out.println("no divisble by 3 and 8 is "+nn+" even number");
+        }
+        //return sum;
+    }
+    
+	public static void main(String[] args) {
+	    Scanner s=new Scanner(System.in);
+		System.out.println("enter how many even number");
+		int nn=s.nextInt();
+		Main m=new Main();
+		m.div(nn);
+	}
+}
