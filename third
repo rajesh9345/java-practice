@@ -1,0 +1,22 @@
+package Rajesh;
+import java.util.*;
+public class Third {
+	StringBuffer rev(String ss) {
+		StringBuffer aa=new StringBuffer();
+		 StringBuffer sb=new StringBuffer(ss);
+		aa=sb.reverse();
+		System.out.println(ss+"|"+aa);
+		return aa;
+	}
+
+	public static void main(String[] args) {
+     Scanner s=new Scanner(System.in);
+     System.out.println("enter one string");
+     String ss=s.nextLine();
+     Third t=new Third();
+     t.rev(ss);
+    
+     
+	}
+
+}
