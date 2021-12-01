@@ -1,0 +1,65 @@
+import java.util.*;
+class Money extends Exception
+{
+	String meg;
+
+	public Money(String meg) {
+		
+		this.meg = meg;
+	}
+
+	@Override
+	public String toString() {
+		return meg;
+	}
+	
+}
+public class ATM1 {
+
+	public static void main(String[] args) {
+    Scanner s=new Scanner(System.in);
+    int balance=500;
+   
+    System.out.println("enter my withdraw amount");
+    String ss=s.nextLine();
+    int debit=Integer.parseInt(ss);
+    try {
+    if(debit<balance && debit!=0 && debit>100 )
+    {
+    	int remain=balance-debit;
+    System.out.println("remain amount "+ remain);
+    }
+    else if(debit>balance)
+    {
+    	throw new Money("enter your less then amount"+ balance);
+    }
+    else if(debit==97 && debit==122)
+    {
+    	throw new Money(" your does not enter zero/string/special symbols ");
+    }
+    else
+    {
+    	throw new Money("your enter aboue 100 rupees");
+    }
+    }
+//    catch(ArithmeticException ae)
+//    {
+//    	System.out.println("does not enter o");
+//    }
+    catch (Money e) {
+		// TODO: handle exception
+    	System.out.println(e);
+	}
+   // throw new IllegalArgumentException("please enter "+ balance +" amount");
+   // }
+//    catch(NumberFormatException ne)
+//    {
+//    	System.out.println("your does not enter zero/string/special s");
+//    }
+    finally
+    {
+    	System.out.println("take your card");
+    }
+	}
+
+}
